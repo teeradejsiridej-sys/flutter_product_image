@@ -65,7 +65,7 @@ class _ProductListState extends State<ProductList> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Product List')), // แถบหัวข้อ
+      appBar: AppBar(title: const Text('Travel List')), // แถบหัวข้อ
       body: Column(
         children: [
           // ช่องค้นหาสินค้า
@@ -74,7 +74,7 @@ class _ProductListState extends State<ProductList> {
             child: TextField(
               controller: searchController,
               decoration: const InputDecoration(
-                labelText: 'Search by product name',
+                labelText: 'Search by Travel name',
                 prefixIcon: Icon(Icons.search),
               ),
               onChanged: filterProducts, // เรียก filterProducts เมื่อพิมพ์
@@ -107,7 +107,7 @@ class _ProductListState extends State<ProductList> {
                           subtitle: Text(
                             product['description'] ?? 'No Description', // รายละเอียดสินค้า
                           ),
-                          trailing: Text('฿${product['price'] ?? '0.00'}'), // ราคา
+
                           onTap: () {
                             Navigator.push(
                               context,
@@ -163,7 +163,7 @@ class ProductDetail extends StatelessWidget {
             Text('Description: ${product['description'] ?? 'No Description'}'),
             const SizedBox(height: 10),
             // ราคา
-            Text('Price: ฿${product['price'] ?? '0.00'}'),
+
           ],
         ),
       ),
